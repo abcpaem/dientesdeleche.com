@@ -1,0 +1,104 @@
+/*CSS PARA WOOCOMMERCE*/
+.checkout-button, #place_order {
+	background-color:#00BCAB!important;
+	padding:15px!important;
+	}
+.elementor-button--checkout,
+.elementor-button--view-cart {
+	background-color:#00BCAB!important;
+	color:white!important;
+}
+.elementor-menu-cart__product-price {
+	color:black!important;
+}
+table tbody>tr:last-child>td, table tbody>tr:last-child>th {
+    background-color: white!important;
+}
+.cart_totals table tbody>tr:nth-child(odd)>td, .cart_totals table tbody>tr:nth-child(odd)>th {
+    background-color: #ebe9eb!important;
+}
+#coupon_code {
+   width:100%!important;
+}
+button[name="update_cart"] {
+  margin-top:20px!important;
+	padding:15px!important;
+}
+.woocommerce-checkout .col-2 {
+   float:none!important;	
+}
+.woocommerce-checkout .col-1 {
+   margin-bottom:20px!important;	
+}
+.woocommerce-additional-fields,
+.woocommerce-customer-details,
+.download-remaining {
+	display:none!important;
+}
+.download-file > a {
+	width: 100%;
+	text-align: center;    
+}
+.woocommerce-table--order-details {
+	width:50%!important;
+}
+.usage_wrapper > strong,
+.file_format_wrapper > strong {
+	font-weight:500!important;	
+}
+@media (min-width: 
+769px) {	
+	.woocommerce-checkout {
+	 position:relative!important;
+	margin-bottom:30px;
+}
+#order_review_heading { position:absolute;
+	top:0px;
+	right:0;
+}
+#order_review { width:50%;
+	position:absolute;
+	z-index:1;
+	top:90px;
+	right:0;
+}	
+	}
+
+ul.flex-direction-nav {
+    position: absolute;
+    top: 30%;
+    z-index: 99999;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0px;
+    list-style: none;}
+
+li.flex-nav-prev {float: left;}
+li.flex-nav-next {float: right;}
+a.flex-next {visibility:hidden;}
+a.flex-prev {visibility:hidden;}
+
+a.flex-next::after {
+	visibility:visible;content: '\f054';
+	font-family: 'Font Awesome 5 Free';
+	margin-right: 10px;
+	font-size: 20px;   
+	font-weight: bold;
+}
+a.flex-prev::before {
+    visibility:visible;
+    content: '\f053';
+	font-family: 'Font Awesome 5 Free';   
+	margin-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+ul.flex-direction-nav li a {
+	color: #ccc;
+}
+ul.flex-direction-nav li a:hover {
+	text-decoration: none;
+}
+
+/*CSS PARA WOOCOMMERCE*/
