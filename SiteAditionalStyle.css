@@ -100,5 +100,13 @@ ul.flex-direction-nav li a {
 ul.flex-direction-nav li a:hover {
 	text-decoration: none;
 }
-
+.woocommerce-MyAccount-navigation {
+	display:none;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+ 	width: 100%;
+}
+body:not(.logged-in) .hide-for-logged-out {
+	display: none !important;
+}
 /*CSS PARA WOOCOMMERCE*/

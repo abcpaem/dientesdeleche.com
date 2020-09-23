@@ -181,4 +181,16 @@
         WC()->mailer()->get_emails()['WC_Email_New_Pending_Order']->trigger( $order_id );
     }
 
+    // Bypass logout confirmation
+    add_action( 'template_redirect', 'bypass_logout_confirmation' );
+    function bypass_logout_confirmation() {
+        global $wp;
+    
+        if ( isset( $wp->query_vars['salir'] ) ) {
+            wp_redirect( str_replace( '&amp;', '&', wp_logout_url( wc_get_page_permalink( 'myaccount' ) ) ) );
+            exit;
+        }
+    }
+    
+
 ?>
