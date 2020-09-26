@@ -1,3 +1,8 @@
+.elementor-widget-heading .elementor-heading-title {
+	color: #83B280;
+	font-size: 27px;
+}
+
 /*CSS PARA WOOCOMMERCE*/
 .checkout-button, #place_order {
 	background-color:#00BCAB!important;
@@ -47,7 +52,7 @@ button[name="update_cart"] {
 	font-weight:500!important;	
 }
 @media (min-width: 
-769px) {	
+900px) {	
 	.woocommerce-checkout {
 	 position:relative!important;
 	margin-bottom:30px;
@@ -104,7 +109,7 @@ ul.flex-direction-nav li a:hover {
 	display:none;
 }
 .woocommerce-account .woocommerce-MyAccount-content {
- 	width: 100%;
+	width: 100%;
 }
 body:not(.logged-in) .hide-for-logged-out {
 	display: none !important;

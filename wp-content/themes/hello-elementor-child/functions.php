@@ -180,7 +180,7 @@
         $order_id = $order->get_id();
         WC()->mailer()->get_emails()['WC_Email_New_Pending_Order']->trigger( $order_id );
     }
-
+    
     // Bypass logout confirmation
     add_action( 'template_redirect', 'bypass_logout_confirmation' );
     function bypass_logout_confirmation() {
@@ -190,7 +190,25 @@
             wp_redirect( str_replace( '&amp;', '&', wp_logout_url( wc_get_page_permalink( 'myaccount' ) ) ) );
             exit;
         }
-    }
+    }  
     
+    // Add Shortcode for IMG with external image url and link
+    function img_shortcode($atts)
+    {
+        // Attributes
+        $atts = shortcode_atts(
+            [
+            'src' => '',
+            'link' => '',
+            ], $atts, 'img'
+        );
+    
+        $return = '<a href="' . $atts['link'] . '" rel="nofollow" target="_blank">
+                    <img src="' . $atts['src'] . '"/>
+                </a>';
+                
+        return $return;
+    }
+    add_shortcode('img', 'img_shortcode');
 
 ?>
