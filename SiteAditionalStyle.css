@@ -1,6 +1,19 @@
-.elementor-widget-heading .elementor-heading-title {
+h1 {
 	color: #83B280;
-	font-size: 27px;
+	font-size: 29px;
+}
+h2, h3 {
+	color: #7a7a7a;
+	font-size: 25px;
+}
+h3 { font-size: 22px; }
+li { padding-top:10px; }
+ul { padding-bottom:10px; }
+
+@media (max-width: 900px) {	
+	h1 { font-size: 25px;	}
+	h2 { font-size: 22px;	}
+	h3 { font-size: 20px; }
 }
 
 /*CSS PARA WOOCOMMERCE*/
