@@ -204,4 +204,10 @@
     }
     add_shortcode('img', 'img_shortcode');
 
+    // Limit products per page
+    add_filter( 'loop_shop_per_page', 'bt_new_loop_shop_per_page', 20 );
+    function bt_new_loop_shop_per_page( $limit ) {
+        $limit = 28;
+        return $limit;
+    }
 ?>
