@@ -1,6 +1,6 @@
 # Summary
 
-This repository contains code tweaks for the Wordpress website dientesdeleche.com 
+This repository contains code tweaks for the Wordpress website https://dientesdeleche.com
 
 The site uses a customised child theme derived from [hello-elementor](https://elementor.com/hello-theme/).
 
@@ -15,7 +15,7 @@ Original plugin source: https://wordpress.org/plugins/woocommerce/
 
 ## zStore Manager Basic
 
-- Interface texts were updated to Spanish.
+- Frontend texts were updated to Spanish.
 - Characters for pagination were updated so now it uses &laquo; and &raquo;
 - Title with anchor was added in content rendering so it can be used in sort and pagination links.
 - Some style tweaks.
