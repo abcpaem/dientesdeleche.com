@@ -3,7 +3,7 @@ h1 {
 	font-size: 29px;
 }
 h2, h3 {
-	color: #7a7a7a;
+	color: #7a7a7a !important;
 	font-size: 25px;
 }
 h3 { font-size: 22px; }
@@ -123,6 +123,12 @@ ul.flex-direction-nav li a:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content {
 	width: 100%;
+}
+.woocommerce-loop-product__title {
+	color: #176D91 !important;
+}
+.woocommerce-Price-amount {
+	color: #77a464 !important;
 }
 body:not(.logged-in) .hide-for-logged-out {
 	display: none !important;

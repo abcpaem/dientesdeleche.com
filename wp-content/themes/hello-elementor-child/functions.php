@@ -43,12 +43,15 @@
     function skip_woo_cart() {
        return wc_get_checkout_url();
     }
-    add_filter( 'woocommerce_product_single_add_to_cart_text', 'cw_btntext_cart');
-    add_filter( 'woocommerce_product_add_to_cart_text', 'cw_btntext_cart' );
-    function cw_btntext_cart() {
+    add_filter( 'woocommerce_product_single_add_to_cart_text', 'cw_btntext_cart', 20, 2);
+    add_filter( 'woocommerce_product_add_to_cart_text', 'cw_btntext_cart', 20, 2);
+    function cw_btntext_cart( $button_text, $product ) {
+        if( $product->is_type('external') )
+            return $button_text;
+
         return __( 'Comprar Ahora', 'woocommerce' );
     }
-    
+
     /* WooCommerce: The Code Below Removes Checkout Fields */
     add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
     function custom_override_checkout_fields( $fields ) {
