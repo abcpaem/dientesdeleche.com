@@ -134,3 +134,22 @@ body:not(.logged-in) .hide-for-logged-out {
 	display: none !important;
 }
 /*CSS PARA WOOCOMMERCE*/
+.elementor-widget-woocommerce-menu-cart.toggle-icon--cart-solid .elementor-menu-cart__toggle .elementor-button-icon i:before
+{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\e93a";
+    font-style:normal;
+}
+.elementor-menu-toggle.elementor-active .eicon-menu-bar:before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\e87f";
+}
+/* Change Hamburguer icon */
+.elementor-menu-toggle .eicon-menu-bar:before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f85c";
+    font-style:normal;
+}

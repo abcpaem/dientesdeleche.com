@@ -23,12 +23,3 @@ Below you can see a summary of the changes made to some of the plugins.
 - Limit amount of products per page.
 
 Original plugin source: https://wordpress.org/plugins/woocommerce/
-
-## zStore Manager Basic
-
-- Frontend texts were updated to Spanish.
-- Characters for pagination were updated so now it uses &laquo; and &raquo;
-- Title with anchor was added in content rendering so it can be used in sort and pagination links.
-- Some style tweaks.
-
-Original plugin source: https://wordpress.org/plugins/zstore-manager-basic/

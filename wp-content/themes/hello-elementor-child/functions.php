@@ -213,4 +213,63 @@
         $limit = 28;
         return $limit;
     }
+
+    // Disable Google Fonts and Font Awesome
+    add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
+    // Disable Font Awesome
+    add_action( 'elementor/frontend/after_register_styles',function() {
+        foreach( [ 'solid', 'regular', 'brands' ] as $style ) {
+            wp_deregister_style( 'elementor-icons-fa-' . $style );
+        }
+    }, 20 );
+
+    // Disable Eicons
+    add_action( 'wp_enqueue_scripts', 'remove_default_stylesheet', 20 ); 
+    function remove_default_stylesheet() { 
+        wp_deregister_style( 'elementor-icons' ); 
+    }
+
+    // Enqueue used Google fonts (user | in family for adding extra fonts)
+    /* function wpb_add_google_fonts() {
+        wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Delius+Swash+Caps', false ); 
+    }
+    add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' ); */
+
+    //Remove Gutenberg Block Library CSS from loading on the frontend
+    function smartwp_remove_wp_block_library_css(){
+        wp_dequeue_style( 'wp-block-library' );
+        wp_dequeue_style( 'wp-block-library-theme' );
+    }
+    add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
+
+    /** Disable Ajax Call from WooCommerce on front page and posts*/
+    add_action( 'wp_enqueue_scripts', 'dequeue_woocommerce_cart_fragments', 11);
+    function dequeue_woocommerce_cart_fragments() {
+        if (is_front_page() || is_single() ) wp_dequeue_script('wc-cart-fragments');
+    }
+
+    // Disable Emojis in WordPress
+    function disable_emoji_feature() {
+	
+        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+        remove_action( 'wp_print_styles', 'print_emoji_styles' );
+        remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+        remove_action( 'admin_print_styles', 'print_emoji_styles' );
+        remove_filter( 'the_content_feed', 'wp_staticize_emoji');
+        remove_filter( 'comment_text_rss', 'wp_staticize_emoji');
+        remove_filter( 'embed_head', 'print_emoji_detection_script' );
+        remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+        add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+        add_filter( 'option_use_smilies', '__return_false' );
+    }
+    
+    function disable_emojis_tinymce( $plugins ) {
+        if( is_array($plugins) ) {
+            $plugins = array_diff( $plugins, array( 'wpemoji' ) );
+        }
+        return $plugins;
+    }
+    
+    add_action('init', 'disable_emoji_feature');
+    add_filter( 'option_use_smilies', '__return_false' );
 ?>
