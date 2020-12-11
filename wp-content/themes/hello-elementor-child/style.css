@@ -17,7 +17,7 @@
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
     font-weight: 900;
-    src: url(https://dientesdeleche.com/staging/fonts/fontawesome.woff) format('woff');
+    src: url(https://dientesdeleche.com/fonts/fontawesome.woff) format('woff');
   }
   
 .fa-user-circle:before {
