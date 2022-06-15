@@ -4,9 +4,8 @@ This repository contains code tweaks for the Wordpress website https://dientesde
 
 The site uses a customised child theme derived from [hello-elementor](https://elementor.com/hello-theme/).
 
-Below you can see a summary of the changes made to some of the plugins.
-
-## Woocommerce
+## WooCommerce
+Changes made in the WooCommerce plugin for Wordpress:
 
 - A new email type was added for pending orders.
 - Code was updated to allow receiving both Paypal IPN and PDT notifications. This will improve the user experience when buying digital products as they can immediately see the download links after a PDT is sent or still get the email notification by using IPN in case that PDT fails.
